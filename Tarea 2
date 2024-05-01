@@ -1,0 +1,48 @@
+Tarea 1 Resumen cap 1
+Los sistemas de multiprocesos se pueden clasificar como:
+• Multiprocesador con acoplamiento laxo o distribuido, o clúster: Consiste en 
+una colección de sistemas relativamente autónomos, donde cada procesador 
+tiene su propia memoria principal y canales de E/S. 
+• Procesadores especializados funcionalmente: Un ejemplo es un procesador 
+de E/S. En este caso, hay un procesador maestro de propósito general que 
+controla procesadores especializados y les proporciona servicios. Los temas 
+relacionados con los procesadores de E/S.
+• Multiprocesador con acoplamiento estrecho: Consiste en un conjunto de 
+procesadores que comparten una memoria principal común y están bajo el 
+control integrado de un sistema operativo
+Tamaño del grano descripción Intervalo de 
+sincronizacion
+Fino Paralelismo inherente en 
+único flujo
+<20
+Medio Procesamiento paralelo o 
+multitarea
+20-200
+Grueso Multiprocesamiento 200-2000
+Muy grueso Multiprocesamiento 
+distribuido entre nodos de 
+una red
+2000-1m
+Independiente N/D
+Un multiprocesador involucra 3 aspectos interrelacionados:
+• Asignación de procesos a procesadores
+• Uso de la multiprogramación en cada procesador individual
+• Activación del proceso, propiamente
+Planificación de procesos
+Los sistemas multiprocesadores mas tradicionales no vinculan los procesadores, hay 
+una única cola para todos los procesadores o se utiliza algún tipo de esquema basado 
+en prioridades, hay varias colas basadas en la prioridad alimentando a un único
+colectivo de procesadores. El sistema puede verse como una arquitectura de colas 
+multiservidor.
+Hilos
+Destacan 4 enfoques generales en la planificación de hilos:
+• Los procesos no se asignan a un procesador particular, se mantiene una cola 
+global de hilos listos y cada procesador cuando esta listo selecciona un hilo de 
+la cola.
+• Un conjunto de hilos relacionados que se planifica para ejecutar sobre un 
+conjunto de procesadores al mismo tiempo tiene una relación uno a uno.
+• Asignan procesadores dedicados, esto proporciona una planificación implícita
+definida por la asignación de hilos a procesadores. Cada proceso usa una 
+cantidad de procesadores igual al numero de hilos en el programa.
+• El numero de hilos de un proceso puede cambiar durante el curso de su 
+ejecución.
